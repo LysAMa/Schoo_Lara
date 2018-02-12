@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UsersController extends Controller
 {
@@ -23,7 +24,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.register');
     }
 
     /**
@@ -34,7 +35,17 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, User::$register_validation_rules);
+
+        $data = request()->only('name','email','password');
+        $data['password'] = bcrypt($data['password']);
+        $user = User::create($data);
+        if($user){
+            \Auth::login($user);
+            return redirect()->route('profile');
+        }
+
+        return back()->withInput();
     }
 
     /**

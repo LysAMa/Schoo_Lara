@@ -22,4 +22,6 @@ Route::group(['middleware' => ['web']],function(){
 	Route::post('/handleLogin', ['as' => 'handleLogin', 'uses' => 'AuthController@handleLogin']);
 	Route::get('/profile', ['middleware' => 'auth', 'as' => 'profile', 'uses' => 'UsersController@profile']);
 	Route::get('/logout', ['as' => 'logout', 'uses' => 'AuthController@logout']);
+	Route::get('/register', ['as' => 'register', 'uses' => 'PagesController@register']);
+	Route::resource('users','UsersController', ['only' => ['create','store']]);
 });

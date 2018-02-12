@@ -2,18 +2,31 @@
 
 @section('content')
 
-<h2>Login</h2>
+	<h2>Login</h2>
 
-{!! Form::open(array('route' => 'handleLogin')) !!}
+	@if(count($errors))
+		<div class="alert-danger">
+			<ul>
+				@foreach($errors->all() as $error)
+					<li> {{ $error }} </li>
+				@endforeach
+			</ul>
+		</div>
+	@endif
 
-<div class="form-group">
-	{!! Form::label('email') !!}
-	{!! Form::text('email',null, array('class' => 'form-control')) !!}
-</div>
-<div class="form-group">
-	{!! Form::label('password') !!}
-	<input type="password" name="password" class="form-control">
-{!! Form::token() !!}
-{!! Form::submit('Login', array('class' => 'btn btn-default'))!!}
-{!! Form::close() !!}
+	{!! Form::open(array('route' => 'handleLogin')) !!}
+
+	<div class="form-group">
+		{!! Form::label('email') !!}
+		{!! Form::text('email',null, array('class' => 'form-control')) !!}
+	</div>
+	<div class="form-group">
+		{!! Form::label('password') !!}
+		<input type="password" name="password" class="form-control">
+	</div>
+
+	{!! Form::token() !!}
+	{!! Form::submit('Login', array('class' => 'btn btn-default'))!!}
+	{!! Form::close() !!}
+	
 @stop
