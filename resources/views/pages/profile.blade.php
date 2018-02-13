@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.master', ['title' => 'Profile'])
 
 @section('content')
 

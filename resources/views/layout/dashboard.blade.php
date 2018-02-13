@@ -73,7 +73,7 @@
                         </a>
                     </li>
                     <li class="active-pro">
-                        <a href="upgrade.html">
+                        <a href="{{ route('logout')}}">
                             <i class="material-icons">unarchive</i>
                             <p>LOG OUT</p>
                         </a>

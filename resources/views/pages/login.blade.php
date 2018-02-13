@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.master',['title' => 'Login'])
 
 @section('content')
 
@@ -28,5 +28,5 @@
 	{!! Form::token() !!}
 	{!! Form::submit('Login', array('class' => 'btn btn-default'))!!}
 	{!! Form::close() !!}
-	
+
 @stop
