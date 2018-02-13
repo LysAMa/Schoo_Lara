@@ -73,9 +73,18 @@
                         </a>
                     </li>
                     <li class="active-pro">
+<<<<<<< HEAD
                         <a href="{{ route('logout')}}">
                             <i class="material-icons">unarchive</i>
                             <p>LOG OUT</p>
+=======
+                        <a href="upgrade.html">
+                        @if(\Auth::check())
+                            <a href="{{ route('logout')}}" class="btn btn-info">Logout</a>
+                        @else
+                            {{link_to_route('login', 'Login')}}
+                        @endif
+>>>>>>> ece8727407d85e28ac1d199c9b9e67e2a0545c87
                         </a>
                     </li>
                 </ul>
