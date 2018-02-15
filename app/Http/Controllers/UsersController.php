@@ -93,7 +93,7 @@ class UsersController extends Controller
         //
     }
 
-    public function profile(){
+    public function dashboard(){
         return view('pages.dashpages.dash');
     }
 }
