@@ -25,3 +25,7 @@ Route::group(['middleware' => ['web']],function(){
 	Route::get('/register', ['as' => 'register', 'uses' => 'PagesController@register']);
 	Route::resource('users','UsersController', ['only' => ['create','store']]);
 });
+
+Route::get('/profile', 'DashboardController@userProfile');
+Route::get('/projects', 'DashboardController@projects');
+Route::get('/investigations', 'DashboardController@investigations');

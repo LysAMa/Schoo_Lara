@@ -37,21 +37,21 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{url('/profile')}}">
                             <i class="material-icons">person</i>
                             <p>User Profile</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{url('/projects')}}">
                             <i class="material-icons">content_paste</i>
-                            <p>Table List</p>
+                            <p>Projects</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{url('/investigations')}}">
                             <i class="material-icons">library_books</i>
-                            <p>Typography</p>
+                            <p>Investigations</p>
                         </a>
                     </li>
                     <li>
