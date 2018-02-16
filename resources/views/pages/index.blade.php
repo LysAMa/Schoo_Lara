@@ -1,9 +1,9 @@
-@extends('layout/master', ['title' => 'Home'])
+@extends('layouts/master')
 
 
 @section('content')
 
-    @include('layout/_nav')
+    @include('layouts/_nav')
 
     <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
       <div class="col-md-6 px-0">

@@ -74,9 +74,17 @@
                     </li>
                     <li class="active-pro">
 
-                        <a href="{{ route('logout')}}">
+                        <a href="{{ url('/logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+
                             <i class="material-icons">unarchive</i>
                             <p>LOG OUT</p>
+                        </a>
+
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
                     </li>
                 </ul>
             </div>

@@ -25,7 +25,7 @@
     <div class="container">
        @yield('content')
 
-      @include('layout/_footer')
+      @include('layouts/_footer')
     </div>
    
 

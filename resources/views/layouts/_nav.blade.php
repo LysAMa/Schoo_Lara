@@ -4,7 +4,7 @@
       <a class="text-muted" href="{{route('register')}}">S'inscrire</a>
     </div>
     <div class="col-4 text-center">
-      <a class="blog-header-logo text-dark" href="{{ route('home') }}">Schoda</a>
+      <a class="blog-header-logo text-dark" href="{{ route('index') }}">Schoda</a>
     </div>
     <div class="col-4 d-flex justify-content-end align-items-center">
       <a class="btn btn-sm btn-outline-secondary" href="{{route('login')}}"> Se connecter</a>
@@ -14,7 +14,7 @@
 
 <div class="nav-scroller py-1 mb-2">
   <nav class="nav d-flex justify-content-between">
-    <a class="p-2 text-muted" href="{{ route('home') }}">Acceuil</a>
+    <a class="p-2 text-muted" href="{{ route('index') }}">Acceuil</a>
     <a class="p-2 text-muted" href="#">A propos</a>
     <a class="p-2 text-muted" href="#">Gallerie</a>
     <a class="p-2 text-muted" href="#">Archives</a>
