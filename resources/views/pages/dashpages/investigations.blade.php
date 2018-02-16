@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.dashboard',['title' => 'Investigation'])
 
 @section('content')
 
