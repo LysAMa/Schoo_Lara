@@ -20,7 +20,10 @@ Auth::routes();
 Route::get('/home', [
 	'as' => 'home',
 	'uses' => 'HomeController@home']);
+
+
 Route::get('/profile', 'DashboardController@userProfile');
 Route::get('/projects', 'DashboardController@projects');
 Route::get('/investigations', 'DashboardController@investigations');
+Route::get('/inbox', 'DashboardController@inbox');
 
