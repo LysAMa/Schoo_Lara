@@ -16,13 +16,18 @@ Route::get('/', [
 	'uses' => 'PagesController@index']);
 	
 Route::get('/confirm/{id}/{token}', 'Auth\RegisterController@confirm');
-Auth::routes();
 
-Route::get('/home', [
+
+Route::group(['middleware' => 'prevent-back-history'],function(){
+	Auth::routes();
+	Route::get('/home', [
 	'as' => 'home',
 	'uses' => 'DashboardController@home']);
-Route::get('/profile', 'DashboardController@userProfile');
-Route::get('/projects', 'DashboardController@projects');
-Route::get('/investigations', 'DashboardController@investigations');
-Route::get('/inbox', 'DashboardController@inbox');
+	Route::get('/profile', 'DashboardController@userProfile');
+	Route::get('/projects', 'DashboardController@projects');
+	Route::get('/investigations', 'DashboardController@investigations');
+	Route::get('/inbox', 'DashboardController@inbox');
+});
+
+
 
