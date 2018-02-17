@@ -55,21 +55,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="material-icons">bubble_chart</i>
-                            <p>Icons</p>
+                        <a href="{{url('/inbox')}}">
+                            <i class="material-icons">inbox</i>
+                            <p>Inbox</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="material-icons">location_on</i>
                             <p>Maps</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="material-icons text-gray">notifications</i>
-                            <p>Notifications</p>
                         </a>
                     </li>
                     <li class="active-pro">

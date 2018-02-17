@@ -11,7 +11,7 @@
     <title> {{isset($title) ? $title. ' | ' : ''}}{{ config('app.name', 'School of Data') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>

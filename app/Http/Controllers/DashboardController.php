@@ -25,4 +25,9 @@ class DashboardController extends Controller
     	return view('pages.dashpages.investigations');
     }
 
+    //inbox
+    public function inbox(){
+    	return view('pages.dashpages.inbox');
+    }
+
 }
