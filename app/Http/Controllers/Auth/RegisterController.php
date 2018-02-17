@@ -47,7 +47,7 @@ class RegisterController extends Controller
        if($user){
             $user->update(['confirmation_token' => null]);
             $this->guard()->login($user);
-            return redirect($this->redirectPath())->with('success','Votre compte a bien ete confirme.');
+            return redirect($this->redirectPath())->with('success','Votre compte a bien été confirmé.');
        }else{
            return redirect('/login')->with('error','Ce lien ne semble plus valide'); 
        }
