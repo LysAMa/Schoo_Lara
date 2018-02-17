@@ -20,6 +20,9 @@ Auth::routes();
 Route::get('/home', [
 	'as' => 'home',
 	'uses' => 'HomeController@home']);
+	
+Route::get('/confirm/{id}/{token}', 'Auth\RegisterController@confirm');
+
 Route::get('/profile', 'DashboardController@userProfile');
 Route::get('/projects', 'DashboardController@projects');
 Route::get('/investigations', 'DashboardController@investigations');

@@ -78,10 +78,10 @@
             </div>
         </nav>
         
-        @if(session('succes'))
+        @if(session('success'))
             <div class="container">
-                <div class="alert alert-succes">
-                    {{ session('succes') }}
+                <div class="alert alert-success">
+                    {{ session('success') }}
                 </div>
             </div>
         @endif
