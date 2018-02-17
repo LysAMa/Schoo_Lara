@@ -6,7 +6,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/apple-icon.png')}}" />
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png')}}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Material Dashboard by Creative Tim</title>
+     <title> {{isset($title) ? $title. ' | ' : ''}} School of Data</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <!-- Bootstrap core CSS     -->
@@ -31,27 +31,27 @@
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="active">
-                        <a href="">
+                        <a href="{{route('home')}}">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{url('/profile')}}">
                             <i class="material-icons">person</i>
                             <p>User Profile</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{url('/projects')}}">
                             <i class="material-icons">content_paste</i>
-                            <p>Table List</p>
+                            <p>Projects</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{url('/investigations')}}">
                             <i class="material-icons">library_books</i>
-                            <p>Typography</p>
+                            <p>Investigations</p>
                         </a>
                     </li>
                     <li>

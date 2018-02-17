@@ -17,4 +17,10 @@ Route::get('/', [
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@home');
+Route::get('/home', [
+	'as' => 'home',
+	'uses' => 'HomeController@home']);
+Route::get('/profile', 'DashboardController@userProfile');
+Route::get('/projects', 'DashboardController@projects');
+Route::get('/investigations', 'DashboardController@investigations');
+

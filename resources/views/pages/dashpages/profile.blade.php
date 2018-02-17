@@ -1,4 +1,4 @@
-@extends('layout.dashboard')
+@extends('layouts.dashboard',['title' => 'Profile'])
 
 @section('content')
     <div class="container-fluid">
