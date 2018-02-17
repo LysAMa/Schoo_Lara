@@ -11,9 +11,10 @@ class DashboardController extends Controller
     {
         $this->middleware('auth');
     }
-    
-    public function index(){
-    	return view('pages.dashpages.dash');
+
+    public function home()
+    {
+        return view('pages.dashpages.dash');
     }
 
     public function projects(){

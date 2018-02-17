@@ -14,15 +14,13 @@
 Route::get('/', [
 	'as' => 'index',
 	'uses' => 'PagesController@index']);
-
+	
+Route::get('/confirm/{id}/{token}', 'Auth\RegisterController@confirm');
 Auth::routes();
 
 Route::get('/home', [
 	'as' => 'home',
-	'uses' => 'HomeController@home']);
-	
-Route::get('/confirm/{id}/{token}', 'Auth\RegisterController@confirm');
-
+	'uses' => 'DashboardController@home']);
 Route::get('/profile', 'DashboardController@userProfile');
 Route::get('/projects', 'DashboardController@projects');
 Route::get('/investigations', 'DashboardController@investigations');
