@@ -10,9 +10,11 @@
     <title> {{isset($title) ? $title. ' | ' : ''}} School of Data</title>
 
     <!-- Bootstrap core CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
+   <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}" 
+   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <!--     Semantic UI     -->
+   <link rel="stylesheet" type="text/css" href="{{ asset('libs/semantic/dist/semantic.min.css')}}">
+   
     <!-- Custom core CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
 
@@ -21,7 +23,7 @@
   </head>
 
   <body>
-
+    
     <div class="container">
        @yield('content')
 
@@ -32,7 +34,17 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+    crossorigin="anonymous"></script>
+    -->
+    
+    <script src="{{asset('js/jquery-3.2.1.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('libs/semantic/dist/semantic.min.js')}} type="text/javascript""></script><!--  Semantic UI Plugin -->
+    
 
   </body>
 </html>

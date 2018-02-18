@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width" />
     <!-- Bootstrap core CSS     -->
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+    <!--     Semantic UI     -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('libs/semantic/dist/semantic.min.css')}}">
     <!--  Material Dashboard CSS    -->
     <link rel="stylesheet" href="{{ asset('css/material-dashboard.css?v=1.2.0')}}">
     <!--  CSS fo Demo Purpose, don t includ it in your project     -->
@@ -18,6 +20,7 @@
     <!--     Fonts and icons     -->
     <link href="{{ asset('css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{ asset('css/css.css')}}" rel='stylesheet' type='text/css'>
+    
 </head>
 
 <body>
@@ -158,6 +161,8 @@
     <script src="{{asset('js/jquery-3.2.1.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('libs/semantic/dist/semantic.min.js')}} type="text/javascript""></script><!--  Semantic UI Plugin -->
+    
     <!--  Charts Plugin -->
     <script src="{{asset('js/chartist.min.js')}}"></script>
     <!--  Dynamic Elements plugin -->
@@ -182,6 +187,9 @@
 
         });
     </script>
+
+    
+
 </body>
 
 
