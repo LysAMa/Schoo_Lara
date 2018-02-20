@@ -6,8 +6,15 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
-                            <h4 class="title">Edit Profile</h4>
-                            <p class="category">Complete your profile</p>
+                            <h4 class="title">
+                                Edit Profile
+                                <i data-ng-click="editProfile = true" class="ui edit icon edit-profile-icon" data-ng-show="editProfile == false"></i>
+                                <i data-ng-click="editProfile = false" class="ui delete icon edit-profile-icon" data-ng-show="editProfile == true"></i>
+                            </h4>
+                            <p class="category" data-ng-show="editProfile == true">
+                                Complete your profile 
+                            </p>
+                            
                         </div>
                         <div class="card-content">
                             <form>

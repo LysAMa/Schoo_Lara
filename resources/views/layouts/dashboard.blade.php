@@ -20,6 +20,8 @@
     <!--     Fonts and icons     -->
     <link href="{{ asset('css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{ asset('css/css.css')}}" rel='stylesheet' type='text/css'>
+    <!-- Custom CSS     -->
+    <link href="{{ asset('css/custom-dashboard.css')}}" rel='stylesheet' type='text/css'>
     
 </head>
 
