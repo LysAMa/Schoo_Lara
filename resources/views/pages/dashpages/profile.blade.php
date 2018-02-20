@@ -1,7 +1,7 @@
 @extends('layouts.dashboard',['title' => 'Profile'])
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid" data-ng-controller="UserProfileCtrl">
             <div class="row">
                 <div class="col-md-8">
                     <div class="card">

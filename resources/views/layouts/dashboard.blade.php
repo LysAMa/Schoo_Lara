@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-ng-app="dashboardApp">
 
 <head>
     <meta charset="utf-8" />
@@ -23,7 +23,7 @@
     
 </head>
 
-<body>
+<body data-ng-controller="DashboardCtrl">
     <div class="wrapper">
         <div class="sidebar" data-color="purple" data-image="{{asset('images/sidebar-1.jpg')}}">
             <div class="logo">
@@ -179,6 +179,11 @@
 
     <!-- Material Dashboard DEMO methods, don t it in your project! -->
     <script src="{{asset('js/demo.js')}}"></script>
+
+    <!-- Angular Apps -->
+    <script src="{{asset('js/angular/Controllers/dashboardCtrl.js')}}"></script>
+    <script src="{{asset('js/angular/Controllers/userProfileCtrl.js')}}"></script>
+    <script src="{{asset('js/angular/Apps/dashboardApp.js')}}"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
