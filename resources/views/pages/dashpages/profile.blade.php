@@ -8,10 +8,14 @@
                         <div class="card-header" data-background-color="purple">
                             <h4 class="title">
                                 Edit Profile
-                                <i data-ng-click="editProfile = true" class="ui edit icon edit-profile-icon" data-ng-show="editProfile == false"></i>
-                                <i data-ng-click="editProfile = false" class="ui delete icon edit-profile-icon" data-ng-show="editProfile == true"></i>
+                                <button type="button" class="btn btn-simple btn-xs edit-profile-icon" data-ng-show="editProfile == true" data-ng-click="editProfile = false">
+                                    <i class="material-icons">close</i>
+                                </button>
+                                <button type="button" class="btn btn-simple btn-xs edit-profile-icon" data-ng-show="editProfile == false" data-ng-click="editProfile = true">
+                                    <i class="material-icons">edit</i>
+                                </button>
                             </h4>
-                            <p class="category" data-ng-show="editProfile == true">
+                            <p class="category" >
                                 Complete your profile 
                             </p>
                             
@@ -20,21 +24,22 @@
                             <form>
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Company (disabled)</label>
-                                            <input type="text" class="form-control" disabled>
+                                        <div class="form-group label-floating" >
+                                            <label class="control-label">Company</label>
+                                            <input type="text" class="form-control" data-ng-disabled="editProfile == false" data-ng-model="profileData.company">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Username</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" data-ng-disabled="editProfile == false" data-ng-model="profileData.userName">
                                         </div>
+                                        
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Email address</label>
-                                            <input type="email" class="form-control">
+                                            <input type="email" class="form-control" data-ng-disabled="editProfile == false" data-ng-model="profileData.email">
                                         </div>
                                     </div>
                                 </div>
@@ -42,13 +47,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Fist Name</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" data-ng-disabled="editProfile == false" data-ng-model="profileData.firstName">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Last Name</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" data-ng-disabled="editProfile == false" data-ng-model="profileData.lastName">
                                         </div>
                                     </div>
                                 </div>
@@ -56,7 +61,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Adress</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" data-ng-disabled="editProfile == false" data-ng-model="profileData.adress">
                                         </div>
                                     </div>
                                 </div>
@@ -64,19 +69,19 @@
                                     <div class="col-md-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">City</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" data-ng-disabled="editProfile == false" data-ng-model="profileData.city">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Country</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" data-ng-disabled="editProfile == false" data-ng-model="profileData.country">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Postal Code</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" data-ng-disabled="editProfile == false" data-ng-model="profileData.postalCode">
                                         </div>
                                     </div>
                                 </div>
@@ -85,13 +90,13 @@
                                         <div class="form-group">
                                             <label>About Me</label>
                                             <div class="form-group label-floating">
-                                                <label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, Im in that two seat Lambo.</label>
-                                                <textarea class="form-control" rows="5"></textarea>
+                                                <label class="control-label"></label>
+                                                <textarea class="form-control" rows="5" data-ng-disabled="editProfile == false" data-ng-model="profileData.aboutMe"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                                <button data-ng-show="editProfile == true" type="submit" class="btn btn-primary pull-right">Update Profile</button>
                                 <div class="clearfix"></div>
                             </form>
                         </div>
@@ -116,4 +121,6 @@
                 </div>
             </div>
         </div>
+
+        
 @endSection
