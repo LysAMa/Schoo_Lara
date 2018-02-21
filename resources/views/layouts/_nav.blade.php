@@ -12,7 +12,7 @@
   </div>
 </header>
 
-<div class="nav-scroller py-1 mb-2">
+<div class="nav-scroller py-1 mb-2" id="myMenu">
   <nav class="nav d-flex justify-content-between">
     <a class="p-2 text-muted" href="{{ route('index') }}">Acceuil</a>
     <a class="p-2 text-muted" href="#">A propos</a>

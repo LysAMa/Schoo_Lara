@@ -17,6 +17,7 @@
    
     <!-- Custom core CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom styles -->
@@ -42,6 +43,7 @@
     -->
     
     <script src="{{asset('js/jquery-3.2.1.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/jquery.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('libs/semantic/dist/semantic.min.js')}} type="text/javascript""></script><!--  Semantic UI Plugin -->
