@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-ng-app="dashboardApp">
 
 <head>
     <meta charset="utf-8" />
@@ -20,10 +20,12 @@
     <!--     Fonts and icons     -->
     <link href="{{ asset('css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{ asset('css/css.css')}}" rel='stylesheet' type='text/css'>
+    <!-- Custom CSS     -->
+    <link href="{{ asset('css/custom-dashboard.css')}}" rel='stylesheet' type='text/css'>
     
 </head>
 
-<body>
+<body data-ng-controller="DashboardCtrl">
     <div class="wrapper">
         <div class="sidebar" data-color="purple" data-image="{{asset('images/sidebar-1.jpg')}}">
             <div class="logo">
@@ -162,7 +164,8 @@
     <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('libs/semantic/dist/semantic.min.js')}} type="text/javascript""></script><!--  Semantic UI Plugin -->
-    
+    <script src="{{asset('js/angular.min.js')}}" type="text/javascript"></script>
+
     <!--  Charts Plugin -->
     <script src="{{asset('js/chartist.min.js')}}"></script>
     <!--  Dynamic Elements plugin -->
@@ -188,7 +191,10 @@
         });
     </script>
 
-    
+    <!-- Angular Apps -->
+    <script src="{{asset('js/angular/Controllers/userProfileCtrl.js')}}"></script>
+    <script src="{{asset('js/angular/Controllers/dashboardCtrl.js')}}"></script>
+    <script src="{{asset('js/angular/Apps/dashboardApp.js')}}"></script>
 
 </body>
 
