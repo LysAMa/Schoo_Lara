@@ -14,11 +14,11 @@ class AddOtherFieldsToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('city');
-            $table->string('postcode');
-            $table->string('aboutme');
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
+            $table->string('city')->nullable();
+            $table->string('postcode')->nullable();
+            $table->string('aboutme')->nullable();
         });
     }
 
