@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container-fluid">
+    <div class="container-fluid" data-ng-controller="DashboardCtrl">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="card card-stats">

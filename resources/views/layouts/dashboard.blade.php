@@ -25,11 +25,11 @@
     
 </head>
 
-<body data-ng-controller="DashboardCtrl">
+<body >
     <div class="wrapper">
         <div class="sidebar" data-color="purple" data-image="{{asset('images/sidebar-1.jpg')}}">
             <div class="logo">
-                <a href="#" class="simple-text">
+                <a href="{{url('/')}}" class="simple-text">
                     Schoda
                 </a>
             </div>
@@ -192,8 +192,9 @@
     </script>
 
     <!-- Angular Apps -->
-    <script src="{{asset('js/angular/Controllers/userProfileCtrl.js')}}"></script>
     <script src="{{asset('js/angular/Controllers/dashboardCtrl.js')}}"></script>
+    <script src="{{asset('js/angular/Controllers/userProfileCtrl.js')}}"></script>
+    <script src="{{asset('js/angular/Controllers/projectsCtrl.js')}}"></script>
     <script src="{{asset('js/angular/Apps/dashboardApp.js')}}"></script>
 
 </body>
