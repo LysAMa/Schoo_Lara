@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
 use App\Notifications\RegisteredUser;
+use App\Models\Profile;
 
 class RegisterController extends Controller
 {
@@ -39,6 +40,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+       
         $this->middleware('guest');
     }
 
@@ -46,6 +48,7 @@ class RegisterController extends Controller
        $user = User::where('id',$id)->where('confirmation_token',$token)->first();
        if($user){
             $user->update(['confirmation_token' => null]);
+            Profile::create(['user_id' => $user->id]);
             $this->guard()->login($user);
             return redirect($this->redirectPath())->with('success','Votre compte a bien été confirmé.');
        }else{
@@ -65,8 +68,8 @@ class RegisterController extends Controller
         event(new Registered($user = $this->create($request->all())));
 
         $user->notify(new RegisteredUser());
-
-        return redirect(route('login'))->with('success','Votre compte a bien ete creer,
+ 
+        return redirect(route('login'))->with('success','Votre compte a bien été  créer,
         vous devez le confirmer avec l\'email que vous allez recevoir.');
     }
 

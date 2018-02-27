@@ -38,4 +38,9 @@ class User extends Authenticatable
             'email' => 'required|email|unique:users',
             'password' => 'required'
     ];
+
+     public function profile()
+    {
+        return $this->hasOne('App\Models\Profile');
+    }
 }
