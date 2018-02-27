@@ -79,7 +79,7 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Title:</label>
+                            <label for="recipient-name" class="col-form-label">Name</label>
                             <input type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="form-group">
