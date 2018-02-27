@@ -10,7 +10,6 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
 Route::get('/', [
 	'as' => 'index',
 	'uses' => 'PagesController@index']);
@@ -23,8 +22,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
 	Route::get('/home', [
 	'as' => 'home',
 	'uses' => 'DashboardController@home']);
-	Route::get('/profile', 'DashboardController@userProfile');
-	Route::post('/profile/{id}', 'DashboardController@editUserProfile');
+
+	Route::resource('/profile', 'ProfileController');
 	Route::get('/projects', 'DashboardController@projects');
 	Route::get('/investigations', 'DashboardController@investigations');
 	Route::get('/inbox', 'DashboardController@inbox');
