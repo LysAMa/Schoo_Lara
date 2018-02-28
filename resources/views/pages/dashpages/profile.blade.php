@@ -98,7 +98,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button data-ng-show="editProfile==true " type="submit " class="btn btn-primary pull-right ">Update Profile</button>
+                        <button data-ng-show="editProfile==true " type="submit" class="btn btn-primary pull-right ">Update Profile</button>
                         <div class="clearfix "></div>
                     </form>
                 </div>

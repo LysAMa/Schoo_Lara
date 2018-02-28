@@ -23,11 +23,12 @@
                             <th></th>
                         </thead>
                         <tbody>
+                            @if(count($projects) > 0) @foreach($projects as $porject)
                             <tr>
-                                <td>First Project</td>
-                                <td>This project was...</td>
-                                <td>123-456</td>
-                                <td>56</td>
+                                <td>{{$porject->name}}</td>
+                                <td>{{$porject->description}}</td>
+                                <td>{{$porject->code}}</td>
+                                <td>{{$porject->nbrBeneficiaire}}</td>
                                 <td class="td-actions text-right">
                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
@@ -37,6 +38,14 @@
                                     </button>
                                 </td>
                             </tr>
+                            @endforeach @else
+                            <tr>
+                                <td colspan="4" class="text-secondary">
+                                    <p class="text-center text-uppercase">No Projects</p>
+                                </td>
+                            </tr>
+
+                            @endif
 
                         </tbody>
                     </table>
@@ -57,29 +66,29 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form method="POST" action="{{action('ProjectsController@store') }}">
+                        {{ csrf_field() }}
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Name</label>
-                                    <input type="text" name="orgName" class="form-control" data-ng-disabled="editProfile == false" value="">
+                                    <input type="text" name="name" class="form-control" data-ng-disabled="editProfile == false" value="">
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Code</label>
-                                    <input type="text" name="name" class="form-control" value="">
+                                    <input type="text" name="code" class="form-control" value="">
                                 </div>
 
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Number of benefits</label>
-                                    <input type="number" name="email" class="form-control" value="">
+                                    <input type="number" name="benefits" class="form-control" value="">
                                 </div>
                             </div>
                         </div>
@@ -88,7 +97,7 @@
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Zone</label>
-                                    <input type="text" name="email" class="form-control" value="">
+                                    <input type="text" name="zone" class="form-control" value="">
                                 </div>
                             </div>
                         </div>
@@ -105,13 +114,11 @@
                             </div>
                         </div>
 
-
+                        <button type="submit" class="btn btn-primary pull-right ">Save</button>
+                        <div class="clearfix "></div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
+
             </div>
         </div>
     </div>

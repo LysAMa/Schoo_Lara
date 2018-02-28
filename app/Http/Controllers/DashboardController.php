@@ -19,11 +19,6 @@ class DashboardController extends Controller
         return view('pages.dashpages.dash');
     }
 
-    public function projects(){
-    	return view('pages.dashpages.projects');
-    }
- 
-
     //investigations
     public function investigations(){
     	return view('pages.dashpages.investigations');

@@ -1,13 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+class Project extends Model
 {
     // Table Name
-    protected $table = 'profiles';
+    protected $table = 'projects';
     // Primary Key
     public $primaryKey = 'id';
     // Timestamps
