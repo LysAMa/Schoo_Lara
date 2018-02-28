@@ -17,47 +17,27 @@
                     <table class="table">
                         <thead class="text-primary">
                             <th>Name</th>
-                            <th>Country</th>
-                            <th>City</th>
-                            <th>Salary</th>
+                            <th>Description</th>
+                            <th>Code</th>
+                            <th>N. of Benefits</th>
+                            <th></th>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Dakota Rice</td>
-                                <td>Niger</td>
-                                <td>Oud-Turnhout</td>
-                                <td class="text-primary">$36,738</td>
+                                <td>First Project</td>
+                                <td>This project was...</td>
+                                <td>123-456</td>
+                                <td>56</td>
+                                <td class="td-actions text-right">
+                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                                        <i class="material-icons">edit</i>
+                                    </button>
+                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                        <i class="material-icons">close</i>
+                                    </button>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Minerva Hooper</td>
-                                <td>Curaçao</td>
-                                <td>Sinaai-Waas</td>
-                                <td class="text-primary">$23,789</td>
-                            </tr>
-                            <tr>
-                                <td>Sage Rodriguez</td>
-                                <td>Netherlands</td>
-                                <td>Baileux</td>
-                                <td class="text-primary">$56,142</td>
-                            </tr>
-                            <tr>
-                                <td>Philip Chaney</td>
-                                <td>Korea, South</td>
-                                <td>Overland Park</td>
-                                <td class="text-primary">$38,735</td>
-                            </tr>
-                            <tr>
-                                <td>Doris Greene</td>
-                                <td>Malawi</td>
-                                <td>Feldkirchen in Kärnten</td>
-                                <td class="text-primary">$63,542</td>
-                            </tr>
-                            <tr>
-                                <td>Mason Porter</td>
-                                <td>Chile</td>
-                                <td>Gloucester</td>
-                                <td class="text-primary">$78,615</td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -78,14 +58,54 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Name</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Name</label>
+                                    <input type="text" name="orgName" class="form-control" data-ng-disabled="editProfile == false" value="">
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">Description:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Code</label>
+                                    <input type="text" name="name" class="form-control" value="">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Number of benefits</label>
+                                    <input type="number" name="email" class="form-control" value="">
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Zone</label>
+                                    <input type="text" name="email" class="form-control" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group ">
+                                    <label>Description</label>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label"></label>
+                                        <textarea class="form-control " name="description" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </form>
                 </div>
                 <div class="modal-footer">
