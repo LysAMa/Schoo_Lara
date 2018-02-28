@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Profile;
 use App\User;
+
 
 class ProfileController extends Controller
 {
@@ -15,7 +17,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
-       return view('pages.dashpages.profile');
+       $profile = Profile::where('user_id', Auth::id())->get()[0];
+       
+       return view('pages.dashpages.profile')->with('profile', $profile);
     }
 
     /**
@@ -25,7 +29,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-         
+       
     }
 
     /**
@@ -36,6 +40,7 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
+        
     }
 
     /**
@@ -57,7 +62,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-     
+        
     }
 
     /**
