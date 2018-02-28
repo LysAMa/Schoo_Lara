@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="card-content">
-                    <form method="POST" action="">
+                    <form method="POST" action="{{action('ProfileController@update', $profile->id) }}">
 
                         {{ csrf_field() }} {{ method_field('PUT')}}
                         <div class="row">
@@ -77,13 +77,13 @@
                             <div class=" col-md-4 ">
                                 <div class="form-group label-floating ">
                                     <label class="control-label ">Country</label>
-                                    <input type="text " name="country " class="form-control " data-ng-disabled="editProfile==false " value="{{ $profile->country}}">
+                                    <input type="text " name="country" class="form-control " data-ng-disabled="editProfile==false" value="{{ $profile->country}}">
                                 </div>
                             </div>
                             <div class="col-md-4 ">
                                 <div class="form-group label-floating ">
                                     <label class="control-label ">Postal Code</label>
-                                    <input type="text " name="codePostal " class="form-control " data-ng-disabled="editProfile==false" value="{{ $profile->code_postal}}">
+                                    <input type="text " name="codePostal" class="form-control " data-ng-disabled="editProfile==false" value="{{ $profile->code_postal}}">
                                 </div>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                                     <label>About Me</label>
                                     <div class="form-group label-floating ">
                                         <label class="control-label "></label>
-                                        <textarea class="form-control " name="bio " rows="5 " data-ng-disabled="editProfile==false">{{ $profile->bio}}</textarea>
+                                        <textarea class="form-control " name="bio" rows="5 " data-ng-disabled="editProfile==false">{{ $profile->bio}}</textarea>
                                     </div>
                                 </div>
                             </div>

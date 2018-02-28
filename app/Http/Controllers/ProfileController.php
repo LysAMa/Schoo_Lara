@@ -74,7 +74,8 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $profile = User::findOrFail($id)->profile();
+        
+        $profile = Profile::findOrFail($id);
         $profile->update([
            'org_name' => $request->orgName,
            'first_name' => $request->firstName,
