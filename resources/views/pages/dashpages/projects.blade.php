@@ -31,7 +31,7 @@
                                 <td>{{$porject->nbrBeneficiaire}}</td>
                                 <td class="td-actions text-right">
                                     <button type="button" rel="tooltip" title="Edit Task" id="edit-btn" class="btn btn-primary btn-simple btn-xs" value="{{$porject->id}}"
-                                        data-toggle="modal" data-target="">
+                                        data-toggle="modal" data-target="#editProjectModal">
                                         <i class="material-icons">edit</i>
                                     </button>
                                     <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
