@@ -30,7 +30,8 @@
                                 <td>{{$porject->code}}</td>
                                 <td>{{$porject->nbrBeneficiaire}}</td>
                                 <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                                    <button type="button" rel="tooltip" title="Edit Task" id="edit-btn" class="btn btn-primary btn-simple btn-xs" value="{{$porject->id}}"
+                                        data-toggle="modal" data-target="">
                                         <i class="material-icons">edit</i>
                                     </button>
                                     <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
@@ -56,7 +57,7 @@
     </div>
 
     <!-- Add Project Modal -->
-    <div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -123,5 +124,66 @@
         </div>
     </div>
 
+    <div class="modal fade" id="editProjectModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Project</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {!! Form::open(['action' => ['ProjectsController@update', 2], 'method' => 'POST']) !!}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group label-floating">
+                                {{Form::label('Name', '', ['class' => 'control-label'])}} {{Form::text('name', '', ['class' => 'form-control'])}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group label-floating">
+                                {{Form::label('Code', '', ['class' => 'control-label'])}} {{Form::text('code', '', ['class' => 'form-control'])}}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group label-floating">
+                                {{Form::label('Number of benefits', '', ['class' => 'control-label'])}} {{Form::text('benefits', '', ['class' => 'form-control'])}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group label-floating">
+                                {{Form::label('Zone', '', ['class' => 'control-label'])}} {{Form::text('zone', '', ['class' => 'form-control'])}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="form-group ">
+                                <label>Description</label>
+                                <div class="form-group label-floating">
+                                    {{Form::label('', '', ['class' => 'control-label'])}} {{Form::textarea('description', '', ['class' => 'form-control', 'rows'
+                                    => '5'])}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{Form::submit('Edit', ['class' => 'btn btn-primary pull-right'])}}
+                    <div class="clearfix "></div>
+                    {!! Form::hidden('_method', 'PUT') !!} {!! Form::close() !!}
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
+
 @endSection

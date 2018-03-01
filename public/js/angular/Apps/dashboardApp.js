@@ -4,4 +4,3 @@ var dashboardApp = angular.module('dashboardApp', []);
 dashboardApp.controller('DashboardCtrl', ["$scope", DashboardCtrl]);
 dashboardApp.controller('UserProfileCtrl', ["$scope", UserProfileCtrl]);
 dashboardApp.controller('ProjectsCtrl', ["$scope", ProjectsCtrl]);
-
