@@ -15,6 +15,7 @@ class ProjectsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
@@ -73,7 +74,9 @@ class ProjectsController extends Controller
      */
     public function edit($id)
     {
-        return $id;
+        $editProject = Project::find($id);
+        $projects = Project::all();
+        return view('pages.dashpages.projects', compact('editProject', 'projects'));
     }
 
     /**
@@ -86,6 +89,8 @@ class ProjectsController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        return $id;
     }
 
     /**
@@ -96,6 +101,9 @@ class ProjectsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project::find($id);
+        $project->delete();
+
+        return redirect()->back();
     }
 }

@@ -23,6 +23,8 @@
     <!-- Custom CSS     -->
     <link href="{{ asset('css/custom-dashboard.css')}}" rel='stylesheet' type='text/css'>
 
+    <script language="JavaScript" src="{{asset('js/jquery-3.2.1.min.js')}}" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -159,7 +161,7 @@
     </div>
 
     <!--   Core JS Files   -->
-    <script src="{{asset('js/jquery-3.2.1.min.js')}}" type="text/javascript"></script>
+
     <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
     <!--  Semantic UI Plugin -->
