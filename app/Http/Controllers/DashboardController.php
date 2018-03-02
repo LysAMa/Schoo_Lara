@@ -21,7 +21,7 @@ class DashboardController extends Controller
 
     //investigations
     public function investigations(){
-    	return view('pages.dashpages.investigations');
+    	
     }
 
     //inbox

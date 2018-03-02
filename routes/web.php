@@ -25,6 +25,6 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
 
 	Route::resource('/profile', 'ProfileController');
 	Route::resource('/projects', 'ProjectsController');
-	Route::get('/investigations', 'DashboardController@investigations');
+	Route::resource('/investigations', 'InvestigationsControllers');
 	Route::get('/inbox', 'DashboardController@inbox');
 });
