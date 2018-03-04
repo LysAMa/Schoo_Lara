@@ -12,4 +12,6 @@ class Project extends Model
     public $primaryKey = 'id';
     // Timestamps
     public $timestamps = true;
+    // Mass assignment - fillable 
+    protected $fillable = ['name', 'code', 'description', 'nbrBeneficiaire', 'zone'];
 }

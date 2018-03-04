@@ -17,7 +17,8 @@ class InvestigationsControllers extends Controller
      */
     public function index()
     {
-        return view('pages.dashpages.investigations');
+        $investigations = Investigation::all();
+        return view('pages.dashpages.investigations')->with('investigations', $investigations);
     }
 
     /**
@@ -39,6 +40,7 @@ class InvestigationsControllers extends Controller
     public function store(Request $request)
     {
         //
+        return "YES";
     }
 
     /**
@@ -50,6 +52,7 @@ class InvestigationsControllers extends Controller
     public function show($id)
     {
         //
+        
     }
 
     /**

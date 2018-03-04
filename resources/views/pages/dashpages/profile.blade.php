@@ -126,4 +126,6 @@
 </div>
 
 
+@endSection @section('appCtrls')
+<script src="{{asset('js/angular/Controllers/userProfileCtrl.js')}}"></script>
 @endSection

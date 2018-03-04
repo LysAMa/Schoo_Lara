@@ -88,9 +88,16 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $project = Project::findOrFail($id);
+        $project->update([
+           'name' => $request->name,
+           'code' => $request->code,
+           'nbrBeneficiaire' => $request->benefits,
+           'zone' => $request->zone,
+           'description' => $request->description
+       ]);
 
-        return $id;
+        return redirect()->back();
     }
 
     /**

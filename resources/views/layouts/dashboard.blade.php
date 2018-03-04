@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-ng-app="dashboardApp">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -11,8 +11,10 @@
     <meta name="viewport" content="width=device-width" />
     <!-- Bootstrap core CSS     -->
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
-    <!--     Semantic UI     -->
+    <!--     Semantic UI 
     <link rel="stylesheet" type="text/css" href="{{ asset('libs/semantic/dist/semantic.min.css')}}">
+    -->
+
     <!--  Material Dashboard CSS    -->
     <link rel="stylesheet" href="{{ asset('css/material-dashboard.css?v=1.2.0')}}">
     <!--  CSS fo Demo Purpose, don t includ it in your project     -->
@@ -24,10 +26,9 @@
     <link href="{{ asset('css/custom-dashboard.css')}}" rel='stylesheet' type='text/css'>
 
     <script language="JavaScript" src="{{asset('js/jquery-3.2.1.min.js')}}" type="text/javascript"></script>
-
 </head>
 
-<body>
+<body data-ng-app="dashboardApp">
     <div class="wrapper">
         <div class="sidebar" data-color="purple" data-image="{{asset('images/sidebar-1.jpg')}}">
             <div class="logo">
@@ -164,8 +165,10 @@
 
     <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
-    <!--  Semantic UI Plugin -->
+    <!--  Semantic UI Plugin 
     <script src="{{asset('libs/semantic/dist/semantic.min.js')}}" type="text/javascript"></script>
+    -->
+
 
     <!--  Charts Plugin -->
     <script src="{{asset('js/chartist.min.js')}}"></script>
@@ -192,14 +195,10 @@
         });
     </script>
 
-
-    <script src="{{asset('js/angular.min.js')}}" type="text/javascript"></script>
-
     <!-- Angular Apps -->
-    <script src="{{asset('js/angular/Controllers/dashboardCtrl.js')}}"></script>
-    <script src="{{asset('js/angular/Controllers/userProfileCtrl.js')}}"></script>
-    <script src="{{asset('js/angular/Controllers/projectsCtrl.js')}}"></script>
+    <script src="{{asset('js/angular.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/angular/Apps/dashboardApp.js')}}"></script>
+    @yield('appCtrls')
 
 </body>
 

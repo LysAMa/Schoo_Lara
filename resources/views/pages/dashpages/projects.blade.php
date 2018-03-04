@@ -1,5 +1,5 @@
 @extends('layouts.dashboard',['title' => 'Project']) @section('content')
-<?php $id = null ?>
+
 <div class="container-fluid" data-ng-controller="ProjectsCtrl">
     <div class="row">
         <div class="col-md-12">
@@ -31,11 +31,11 @@
                                 <td>{{$project->code}}</td>
                                 <td>{{$project->nbrBeneficiaire}}</td>
                                 <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" data-project_id="{{ $project->id }}"
+                                    <button type="button" rel="tooltip" title="Edit Task" data-ng-click="setDataEdit()" value="{{$project}}" class="btn btn-primary btn-simple btn-xs edit-btn"
                                         data-toggle="modal" data-target="#editProjectModal">
                                         <i class="material-icons">edit</i>
                                     </button>
-                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs" data-project_id="{{ $project->id }}"
+                                    <button type="button" rel="tooltip" title="Remove" value="{{$project->id}}" class="btn btn-danger btn-simple btn-xs remove-btn"
                                         data-toggle="modal" data-target="#deleteProjectModal">
                                         <i class="material-icons">close</i>
                                     </button>
@@ -47,12 +47,10 @@
                                     <p class="text-center text-uppercase">No Projects</p>
                                 </td>
                             </tr>
-
                             @endif
 
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </div>
@@ -131,13 +129,14 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+
                 <div class="modal-body">
-                    {!! Form::open(['method' => 'POST', 'id' => 'editForm']) !!} @if(count($projects->find($id))) {{$pEdit = $projects->find(3)}}
-                    {{$pEdit->id}}@endif
+                    {!! Form::open(['id' => 'editForm', 'method' => 'PUT']) !!}
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group label-floating">
-                                {{Form::label('Name', '', ['class' => 'control-label'])}} {{Form::text('name', '', ['class' => 'form-control'])}}
+                                {{Form::label('Name', '', ['class' => 'control-label'])}}
+                                <input type="text" name="name" class="form-control" value="@{{editData.name}}">
                             </div>
                         </div>
                     </div>
@@ -145,12 +144,14 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group label-floating">
-                                {{Form::label('Code', '', ['class' => 'control-label'])}} {{Form::text('code', '', ['class' => 'form-control'])}}
+                                {{Form::label('Code', '', ['class' => 'control-label'])}}
+                                <input type="text" name="code" class="form-control" value="@{{editData.code}}">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group label-floating">
-                                {{Form::label('Number of benefits', '', ['class' => 'control-label'])}} {{Form::text('benefits', '', ['class' => 'form-control'])}}
+                                {{Form::label('Number of benefits', '', ['class' => 'control-label'])}}
+                                <input type="text" name="benefits" class="form-control" value="@{{editData.nbrBeneficiaire}}">
                             </div>
                         </div>
                     </div>
@@ -158,7 +159,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group label-floating">
-                                {{Form::label('Zone', '', ['class' => 'control-label'])}} {{Form::text('zone', '', ['class' => 'form-control'])}}
+                                {{Form::label('Zone', '', ['class' => 'control-label'])}}
+                                <input type="text" name="zone" class="form-control" value="@{{editData.zone}}">
                             </div>
                         </div>
                     </div>
@@ -168,8 +170,8 @@
                             <div class="form-group ">
                                 <label>Description</label>
                                 <div class="form-group label-floating">
-                                    {{Form::label('', '', ['class' => 'control-label'])}} {{Form::textarea('description', '', ['class' => 'form-control', 'rows'
-                                    => '5'])}}
+                                    {{Form::label('', '', ['class' => 'control-label'])}}
+                                    <textarea type="text" rows="5" name="description" class="form-control">@{{editData.description}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -207,22 +209,6 @@
     </div>
 </div>
 
-<script>
-    $(function () {
-        var APP_URL = "{!! url('/') !!}";
-
-        $('#editProjectModal').on('show.bs.modal', function (e) {
-            var projectId = $(e.relatedTarget).data('project_id');
-            var id = "<?php $id = " + projectId + " ?>";
-            $("#editForm").attr('action', APP_URL + '/projects/' + projectId);
-        });
-
-        $('#deleteProjectModal').on('show.bs.modal', function (e) {
-            var projectId = $(e.relatedTarget).data('project_id');
-            var id = "<?php $id = " + projectId + " ?>";
-            $("#deleteForm").attr('action', APP_URL + '/projects/' + projectId);
-        });
-    });
-</script>
-
+@endSection @section('appCtrls')
+<script src="{{asset('js/angular/Controllers/projectsCtrl.js')}}"></script>
 @endSection
