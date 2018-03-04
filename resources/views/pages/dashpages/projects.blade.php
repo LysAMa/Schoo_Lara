@@ -15,42 +15,46 @@
                     <p class="category">Here is a subtitle for this table</p>
                 </div>
                 <div class="card-content table-responsive">
-                    <table class="table">
-                        <thead class="text-primary">
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Code</th>
-                            <th>N. of Benefits</th>
-                            <th></th>
-                        </thead>
-                        <tbody>
-                            @if(count($projects) > 0) @foreach($projects as $project)
-                            <tr>
-                                <td>{{$project->name}}</td>
-                                <td>{{$project->description}}</td>
-                                <td>{{$project->code}}</td>
-                                <td>{{$project->nbrBeneficiaire}}</td>
-                                <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="Edit Task" data-ng-click="setDataEdit()" value="{{$project}}" class="btn btn-primary btn-simple btn-xs edit-btn"
-                                        data-toggle="modal" data-target="#editProjectModal">
-                                        <i class="material-icons">edit</i>
-                                    </button>
-                                    <button type="button" rel="tooltip" title="Remove" value="{{$project->id}}" class="btn btn-danger btn-simple btn-xs remove-btn"
-                                        data-toggle="modal" data-target="#deleteProjectModal">
-                                        <i class="material-icons">close</i>
-                                    </button>
-                                </td>
-                            </tr>
-                            @endforeach @else
-                            <tr>
-                                <td colspan="4" class="text-secondary">
-                                    <p class="text-center text-uppercase">No Projects</p>
-                                </td>
-                            </tr>
+                    @if(count($projects) > 0)
+                    <table class="table table-hover">
+                        @else
+                        <table class="table">
                             @endif
+                            <thead class="text-primary">
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Code</th>
+                                <th>N. of Benefits</th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                @if(count($projects) > 0) @foreach($projects as $project)
+                                <tr>
+                                    <td>{{$project->name}}</td>
+                                    <td>{{$project->description}}</td>
+                                    <td>{{$project->code}}</td>
+                                    <td>{{$project->nbrBeneficiaire}}</td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Edit Task" data-ng-click="setDataEdit({{$project}})" class="btn btn-primary btn-simple btn-xs edit-btn"
+                                            data-toggle="modal" data-target="#editProjectModal">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove" data-ng-click="removeProject({{$project->id}})" class="btn btn-danger btn-simple btn-xs remove-btn"
+                                            data-toggle="modal" data-target="#deleteProjectModal">
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                @endforeach @else
+                                <tr>
+                                    <td colspan="4" class="text-secondary">
+                                        <p class="text-center text-uppercase">No Projects</p>
+                                    </td>
+                                </tr>
+                                @endif
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
                 </div>
             </div>
         </div>

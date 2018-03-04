@@ -12,34 +12,38 @@
                     <p class="category">Here is a subtitle for this table</p>
                 </div>
                 <div class="card-content table-responsive">
-                    <table class="table">
-                        <thead class="text-primary">
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Zone</th>
-                            <th>Link</th>
-                            <th>Image</th>
-                        </thead>
-                        <tbody>
-                            @if(count($investigations) > 0) @foreach($investigations as $investigation)
-                            <tr>
-                                <td>Dakota</td>
-                                <td>Niger</td>
-                                <td>Delmas</td>
-                                <td>https:\\www.link.com</td>
-                                <td class="text-primary">view</td>
-                            </tr>
-                            @endforeach @else
-                            <tr>
-                                <td colspan="5" class="text-secondary">
-                                    <p class="text-center text-uppercase">No Investigations</p>
-                                </td>
-                            </tr>
-
+                    @if(count($investigations) > 0)
+                    <table class="table table-hover">
+                        @else
+                        <table class="table">
                             @endif
+                            <thead class="text-primary">
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Zone</th>
+                                <th>Link</th>
+                                <th>Image</th>
+                            </thead>
+                            <tbody>
+                                @if(count($investigations) > 0) @foreach($investigations as $investigation)
+                                <tr>
+                                    <td>Dakota</td>
+                                    <td>Niger</td>
+                                    <td>Delmas</td>
+                                    <td>https:\\www.link.com</td>
+                                    <td class="text-primary">view</td>
+                                </tr>
+                                @endforeach @else
+                                <tr>
+                                    <td colspan="5" class="text-secondary">
+                                        <p class="text-center text-uppercase">No Investigations</p>
+                                    </td>
+                                </tr>
 
-                        </tbody>
-                    </table>
+                                @endif
+
+                            </tbody>
+                        </table>
                 </div>
             </div>
         </div>
