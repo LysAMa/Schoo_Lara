@@ -94,7 +94,8 @@ class ProjectsController extends Controller
            'code' => $request->code,
            'nbrBeneficiaire' => $request->benefits,
            'zone' => $request->zone,
-           'description' => $request->description
+           'description' => $request->description,
+           'user_id' => Auth::id()
        ]);
 
         return redirect()->back();

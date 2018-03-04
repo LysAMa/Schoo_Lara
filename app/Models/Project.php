@@ -13,5 +13,5 @@ class Project extends Model
     // Timestamps
     public $timestamps = true;
     // Mass assignment - fillable 
-    protected $fillable = ['name', 'code', 'description', 'nbrBeneficiaire', 'zone'];
+    protected $fillable = ['name', 'code', 'description', 'nbrBeneficiaire', 'zone', 'user_id'];
 }
