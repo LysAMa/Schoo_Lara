@@ -11,9 +11,8 @@
     <meta name="viewport" content="width=device-width" />
     <!-- Bootstrap core CSS     -->
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
-    <!--     Semantic UI 
+    <!--     Semantic UI  -->
     <link rel="stylesheet" type="text/css" href="{{ asset('libs/semantic/dist/semantic.min.css')}}">
-    -->
 
     <!--  Material Dashboard CSS    -->
     <link rel="stylesheet" href="{{ asset('css/material-dashboard.css?v=1.2.0')}}">
@@ -165,9 +164,8 @@
 
     <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
-    <!--  Semantic UI Plugin 
+    <!--  Semantic UI Plugin -->
     <script src="{{asset('libs/semantic/dist/semantic.min.js')}}" type="text/javascript"></script>
-    -->
 
 
     <!--  Charts Plugin -->

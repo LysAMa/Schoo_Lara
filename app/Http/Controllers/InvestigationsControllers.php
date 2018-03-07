@@ -39,8 +39,17 @@ class InvestigationsControllers extends Controller
      */
     public function store(Request $request)
     {
-        //
-        return "YES";
+        $investigation = new Investigation;
+
+        $investigation->name = $request->name;
+        $investigation->zone = $request->zone;
+        $investigation->description = $request->description;
+        $investigation->lien = $request->link;
+        $investigation->user_id = Auth::id();
+
+        $investigation->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -75,7 +84,17 @@ class InvestigationsControllers extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $investigation = Investigation::findOrFail($id);
+        $investigation->update([
+           'name' => $request->name,
+           'lien' => $request->link,
+           'image' => '',
+           'zone' => $request->zone,
+           'description' => $request->description,
+           'user_id' => Auth::id()
+       ]);
+
+        return redirect()->back();
     }
 
     /**
@@ -86,6 +105,9 @@ class InvestigationsControllers extends Controller
      */
     public function destroy($id)
     {
-        //
+        $investigation = Investigation::find($id);
+        $investigation->delete();
+
+        return redirect()->back();
     }
 }

@@ -20,6 +20,7 @@ class CreateSurveysTable extends Migration
             $table->string('zone')->nullable();
             $table->string('lien')->nullable();
             $table->string('image')->nullable();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->timestamps();
 
         });

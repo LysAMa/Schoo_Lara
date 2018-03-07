@@ -12,4 +12,6 @@ class Investigation extends Model
     public $primaryKey = 'id';
     // Timestamps
     public $timestamps = true;
+    // Mass assignment - fillable 
+    protected $fillable = ['name', 'zone', 'description', 'lien', 'image', 'user_id'];
 }
