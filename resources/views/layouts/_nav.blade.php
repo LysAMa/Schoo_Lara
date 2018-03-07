@@ -7,7 +7,7 @@
       <a class="blog-header-logo text-dark" href="{{ route('index') }}">Schoda</a>
     </div>
     <div class="col-4 d-flex justify-content-end align-items-center">
-      <a class="btn btn-sm btn-outline-secondary" href="{{route('login')}}">{{Auth::user() ? 'Deconexion' : 'Se connecter'}}</a>
+      <a class="btn btn-sm btn-outline-secondary" href="{{route('login')}}">{{Auth::user() ? 'Se déconnecter' : 'Se connecter'}}</a>
     </div>
   </div>
 </header>
