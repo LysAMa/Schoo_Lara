@@ -16,190 +16,78 @@
 <div class="row mb-2">
   <div class="col-md-12">
 
-    <div class="ui cards">
+    <div class="ui two column grid">
 
-      <div class="card">
-        <div class="content">
-          <img class="right floated ui avatar image" src="{{asset('images/steve.jpg')}}">
-          <div class="header">
-            Elliot Fu
+
+      @for ($i = 0; $i
+      < 6; $i++) <div class="column">
+        <div class="ui link fluid card">
+          <div class="content">
+            <img class="right floated ui avatar image" src="{{asset('images/steve.jpg')}}">
+            <div class="header primaryColor">
+              Elliot Fu
+            </div>
+            <div class="meta">
+              Friends of Veronika
+            </div>
+            <div class="ui divider"></div>
+            <div class="description">
+
+              <img class="ui fluid image rounded" src="{{asset('images/350x150.png')}}">
+
+              <div class="ui divider"></div>
+              <div>Elliot requested permission to view your contact details</div>
+            </div>
           </div>
-          <div class="meta">
-            Friends of Veronika
+
+          <div class="extra content">
+
+            <span class="right floated">
+              <i class="heart outline like icon"></i>
+              17 likes
+            </span>
+            <i class="comment icon"></i>
+            2 comments
+
           </div>
-          <div class="description">
-            <img class="img-fluid rounded" src="{{asset('images/350x150.png')}}"> Elliot requested permission to view your contact details
-          </div>
-        </div>
 
-        <div class="extra content">
-
-          <span class="right floated">
-            <i class="heart outline like icon"></i>
-            17 likes
-          </span>
-          <i class="comment icon"></i>
-          2 comments
-
-        </div>
-
-        <div class="extra content">
-          <div>Comments</div>
-          <div class="ui comments">
-            <div class="comment">
-              <a class="avatar">
-                <img src="{{asset('images/joe.jpg')}}">
-              </a>
-              <div class="content">
-                <a class="author">Tom Lukic</a>
-                <div class="metadata">
-                  <div class="date">2 days ago</div>
-                  <div class="rating">
-                    <i class="star icon"></i>
-                    5 Faves
+          <div class="extra content">
+            <div>Comments</div>
+            <div class="ui comments">
+              <div class="comment">
+                <a class="avatar">
+                  <img src="{{asset('images/joe.jpg')}}">
+                </a>
+                <div class="content">
+                  <a class="author">Tom Lukic</a>
+                  <div class="metadata">
+                    <div class="date">2 days ago</div>
+                    <div class="rating">
+                      <i class="star icon"></i>
+                      5 Faves
+                    </div>
                   </div>
-                </div>
-                <div class="text">
-                  This will be great for business reports. I will definitely download this.
-                </div>
-                <div class="actions">
-                  <a class="reply">Reply</a>
-                  <a class="save">Save</a>
-                  <a class="hide">Hide</a>
-                  <a>
-                    <i class="expand icon"></i>
-                    Full-screen
-                  </a>
+                  <div class="text">
+                    This will be great for business reports. I will definitely download this.
+                  </div>
+                  <div class="actions">
+                    <a class="reply">Reply</a>
+                    <a class="save">Save</a>
+                    <a class="hide">Hide</a>
+                    <a>
+                      <i class="expand icon"></i>
+                      Full-screen
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="content">
-          <img class="right floated ui avatar image" src="{{asset('images/steve.jpg')}}">
-          <div class="header">
-            Elliot Fu
-          </div>
-          <div class="meta">
-            Friends of Veronika
-          </div>
-          <div class="description">
-            <img class="img-fluid rounded" src="{{asset('images/350x150.png')}}"> Elliot requested permission to view your contact details
-          </div>
-        </div>
-
-        <div class="extra content">
-
-          <span class="right floated">
-            <i class="heart outline like icon"></i>
-            17 likes
-          </span>
-          <i class="comment icon"></i>
-          2 comments
-
-        </div>
-
-        <div class="extra content">
-          <div>Comments</div>
-          <div class="ui comments">
-            <div class="comment">
-              <a class="avatar">
-                <img src="{{asset('images/joe.jpg')}}">
-              </a>
-              <div class="content">
-                <a class="author">Tom Lukic</a>
-                <div class="metadata">
-                  <div class="date">2 days ago</div>
-                  <div class="rating">
-                    <i class="star icon"></i>
-                    5 Faves
-                  </div>
-                </div>
-                <div class="text">
-                  This will be great for business reports. I will definitely download this.
-                </div>
-                <div class="actions">
-                  <a class="reply">Reply</a>
-                  <a class="save">Save</a>
-                  <a class="hide">Hide</a>
-                  <a>
-                    <i class="expand icon"></i>
-                    Full-screen
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="content">
-          <img class="right floated ui avatar image" src="{{asset('images/steve.jpg')}}">
-          <div class="header">
-            Elliot Fu
-          </div>
-          <div class="meta">
-            Friends of Veronika
-          </div>
-          <div class="description">
-            <img class="img-fluid rounded" src="{{asset('images/350x150.png')}}"> Elliot requested permission to view your contact details
-          </div>
-        </div>
-
-        <div class="extra content">
-
-          <span class="right floated">
-            <i class="heart outline like icon"></i>
-            17 likes
-          </span>
-          <i class="comment icon"></i>
-          2 comments
-
-        </div>
-
-        <div class="extra content">
-          <div>Comments</div>
-          <div class="ui comments">
-            <div class="comment">
-              <a class="avatar">
-                <img src="{{asset('images/joe.jpg')}}">
-              </a>
-              <div class="content">
-                <a class="author">Tom Lukic</a>
-                <div class="metadata">
-                  <div class="date">2 days ago</div>
-                  <div class="rating">
-                    <i class="star icon"></i>
-                    5 Faves
-                  </div>
-                </div>
-                <div class="text">
-                  This will be great for business reports. I will definitely download this.
-                </div>
-                <div class="actions">
-                  <a class="reply">Reply</a>
-                  <a class="save">Save</a>
-                  <a class="hide">Hide</a>
-                  <a>
-                    <i class="expand icon"></i>
-                    Full-screen
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-
     </div>
 
+
+    @endfor
 
   </div>
 
