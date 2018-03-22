@@ -16,7 +16,7 @@
 <div class="row mb-2">
   <div class="col-md-12">
 
-    <div class="ui two column grid">
+    <div class="ui stackable two column grid">
 
 
       @for ($i = 0; $i
