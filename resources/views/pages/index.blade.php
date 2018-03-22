@@ -33,7 +33,7 @@
             <div class="ui divider"></div>
             <div class="description">
 
-              <img class="ui fluid image rounded" src="{{asset('images/350x150.png')}}">
+              <img class="ui fluid image rounded" src="{{asset('images/image.png')}}">
 
               <div class="ui divider"></div>
               <div>Elliot requested permission to view your contact details</div>
