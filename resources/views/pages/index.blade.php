@@ -12,6 +12,8 @@
   </div>
 </div>
 -->
+
+
 <hr>
 <div class="row mb-2">
   <div class="col-md-12">
@@ -85,9 +87,8 @@
           </div>
         </div>
     </div>
-
-
     @endfor
+
 
   </div>
 
