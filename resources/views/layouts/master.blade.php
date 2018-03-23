@@ -29,7 +29,7 @@
 
 </head>
 
-<body>
+<body data-ng-app="dashboardApp">
 
   <div class="container">
     @yield('content') @include('layouts/_footer')
@@ -51,6 +51,11 @@
   <script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
   <script src="{{asset('libs/semantic/dist/semantic.min.js')}} type=" text/javascript ""></script>
   <!--  Semantic UI Plugin -->
+
+  <!-- Angular Apps -->
+  <script src="{{asset('js/angular.min.js')}}" type="text/javascript"></script>
+  <script src="{{asset('js/angular/Apps/dashboardApp.js')}}"></script>
+  @yield('appCtrls')
 
 
 </body>

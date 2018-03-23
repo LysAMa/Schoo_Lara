@@ -15,7 +15,7 @@
 
 
 <hr>
-<div class="row mb-2">
+<div class="row mb-2" data-ng-controller="HomePageCtrl">
   <div class="col-md-12">
 
     <div class="ui stackable two column grid">
@@ -23,7 +23,7 @@
 
       @for ($i = 0; $i
       < 6; $i++) <div class="column">
-        <div class="ui link fluid card">
+        <div class="ui link fluid card" data-ng-click="showCardModal()">
           <div class="content">
             <img class="right floated ui avatar image" src="{{asset('images/steve.jpg')}}">
             <div class="header primaryColor">
@@ -89,8 +89,41 @@
     </div>
     @endfor
 
+    <!--Card Modal-->
+
+    <div class="ui modal" id="cardModal">
+      <i class="close icon"></i>
+      <div class="header">
+        Profile Picture
+      </div>
+      <div class="image content">
+        <div class="ui medium image">
+          <img src="/images/avatar/large/chris.jpg">
+        </div>
+        <div class="description">
+          <div class="ui header">We've auto-chosen a profile image for you.</div>
+          <p>We've grabbed the following image from the
+            <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+          <p>Is it okay to use this photo?</p>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui black deny button">
+          Nope
+        </div>
+        <div class="ui positive right labeled icon button">
+          Yep, that's me
+          <i class="checkmark icon"></i>
+        </div>
+      </div>
+    </div>
+
 
   </div>
 
 </div>
-@stop
+
+
+@stop @section('appCtrls')
+<script src="{{asset('js/angular/Controllers/homePageCtrl.js')}}"></script>
+@endSection
