@@ -1,4 +1,4 @@
- {
+{
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
@@ -7,7 +7,10 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
-        "laravelcollective/html": "5.3.*"
+        "laravelcollective/html": "5.3.*",
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/psr-http-message-bridge": "^1.0",
+        "zendframework/zend-diactoros": "^1.7"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

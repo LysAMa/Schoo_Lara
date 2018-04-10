@@ -16,6 +16,7 @@ Route::get('/', [
 	
 Route::get('/confirm/{id}/{token}', 'Auth\RegisterController@confirm');
 
+Route::get('/koboapi', 'GuzzleController@getRemoteData');
 
 Route::group(['middleware' => 'prevent-back-history'],function(){
 	Auth::routes();
