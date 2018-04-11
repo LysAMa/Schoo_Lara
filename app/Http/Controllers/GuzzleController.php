@@ -12,7 +12,7 @@ class GuzzleController extends Controller
             'headers' => ['content-type' => 'application/json', 'Accept' => 'application/json']
         ]);
         
-        $res = $client->request('GET', 'https://kc.kobotoolbox.org/api/v1/forms', [
+        $res = $client->request('GET', 'https://kc.kobotoolbox.org/api/v1/data', [
             'auth' => ['edx_2017', 'monkobotoolbox']
         ]);
 
