@@ -76,10 +76,21 @@
                                 <th>Link</th>
                                 <th>Publish</th>
                             </thead>
+
                             <tbody>
                                 @if(count($investigations) > 0)@foreach($investigations as $investigation)
                                 <tr>
-                                    <td>{{$investigation}}</td>
+                                    <td>{{$investigation['title']}}</td>
+                                    <td>{{$investigation['description']}}</td>
+                                    <td>{{$investigation['id']}}</td>
+                                    <td>{{$investigation['url']}}</td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="optionsCheckboxes">
+                                            </label>
+                                        </div>
+                                    </td>
                                 </tr>
                                 @endforeach @else
                                 <tr>

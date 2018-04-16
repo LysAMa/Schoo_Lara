@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use GuzzleHttp\Client;
 use App\Models\Investigation;
 use App\User;
@@ -28,7 +29,9 @@ class InvestigationsControllers extends Controller
             'auth' => ['edx_2017', 'monkobotoolbox']
         ]);
 
-        $investigations = $res->getBody();
+        $investigations = json_decode($res->getBody()->getContents(), true); 
+       
+        return $investigations;
 
         return view('pages.dashpages.investigations')->with('investigations', $investigations);
     }
