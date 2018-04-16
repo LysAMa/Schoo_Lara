@@ -31,7 +31,7 @@ class InvestigationsControllers extends Controller
 
         $investigations = json_decode($res->getBody()->getContents(), true); 
        
-        return $investigations;
+        
 
         return view('pages.dashpages.investigations')->with('investigations', $investigations);
     }
